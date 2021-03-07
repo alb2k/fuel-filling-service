@@ -14,6 +14,8 @@ public class FillingService {
     @Inject
     private FillingRepository fillingRepository;
 
+    public boolean cleanAndUseDefaults() { return this.fillingRepository.cleanAndUseDefaults(); }
+
     public List<DBFilling> getAll() {
         return this.fillingRepository.getAll();
     }
