@@ -8,8 +8,6 @@ This webservice contains
 * microstream
 * microprofile (config)
 * helidon (mp)
-  * native-image (experimental)
-  * jlink-image (experimental)
 * logging via slf4j and log4j
 * openapi
 * openapi-ui
