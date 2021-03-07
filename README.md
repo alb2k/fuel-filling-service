@@ -4,8 +4,6 @@ A helidon (microprofile) RESTful webservice with microstream.
 The project represents a basic CRUD webservice where you can manage fuel fillings (of a car).
 It is also shipped with a nice UI (openapi-ui) so that no external REST/HTTP client is required.
 
-![openapi-ui screenshot](assets/OpenApiUI.png)
-
 This webservice contains 
 * microstream
 * microprofile (config)
@@ -17,6 +15,11 @@ This webservice contains
 * openapi-ui
 
 This project was create for the [Microstream hackathon](https://hackathon.microstream.one/)
+
+## [Demo](https://hackathon-ms-fuel-filling.herokuapp.com)
+A demo is online available on heroku.
+
+![openapi-ui screenshot](assets/OpenApiUI.png)
 
 ## Download
 There are prebuilt executables, which save you from building the executable locally.
