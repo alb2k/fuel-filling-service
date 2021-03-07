@@ -4,18 +4,20 @@ A helidon (microprofile) RESTful webservice with microstream.
 The project represents a basic CRUD webservice where you can manage fuel fillings (of a car).<br>
 It is also shipped with a nice UI (openapi-ui) so that no external REST/HTTP client is required.
 
-This webservice contains 
-* microstream
-* microprofile (config)
-* helidon (mp)
-* logging via slf4j and log4j
-* openapi
-* openapi-ui
+This project was created for the [Microstream hackathon](https://hackathon.microstream.one/)
 
-This project was create for the [Microstream hackathon](https://hackathon.microstream.one/)
+### Used technologies
+* [Microstream](https://microstream.one/platforms/microstream-for-java/)
+* [Microprofile (config)](https://github.com/eclipse/microprofile-config)
+* [Helidon MP](https://helidon.io/#getting-started)
+* Logging via [SLF4J](http://www.slf4j.org/) and [Apache Log4j 2](https://logging.apache.org/log4)
+* [OpenApi](https://www.openapis.org/)
+* [OpenApi-UI](https://swagger.io/tools/swagger-ui/)
+* [GitHub Actions](https://github.com/features/actions) for CI/CD
+* [Heroku](https://www.heroku.com/) for hosting the demo
 
 ## [Demo](https://hackathon-ms-fuel-filling.herokuapp.com)
-A demo is hosted on heroku.
+The demo is hosted on heroku.
 
 ![openapi-ui screenshot](assets/OpenApiUI.png)
 
