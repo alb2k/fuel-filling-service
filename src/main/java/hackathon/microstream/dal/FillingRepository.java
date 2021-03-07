@@ -13,6 +13,10 @@ import java.util.UUID;
 
 public class FillingRepository {
 
+    public boolean cleanAndUseDefaults() {
+        return DBManager.getInstance().addDefaultFillings();
+    }
+
     public List<DBFilling> getAll() {
         return Collections.unmodifiableList(getFillings());
     }

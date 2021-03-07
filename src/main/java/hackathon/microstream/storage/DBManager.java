@@ -54,30 +54,7 @@ public class DBManager {
             if (demoMode) {
                 LOG.info("Demo mode; Using demo data");
                 context = new DBContext();
-                context.getFillings().add(
-                        new DBFilling(
-                                LocalDate.of(2020, 10, 24),
-                                "Diesel",
-                                29.5,
-                                1.00,
-                                500)
-                );
-                context.getFillings().add(
-                        new DBFilling(
-                                LocalDate.of(2021, 2, 20),
-                                "Diesel",
-                                35,
-                                1.25,
-                                475)
-                );
-                context.getFillings().add(
-                        new DBFilling(
-                                LocalDate.of(2015, 10, 21),
-                                "Plutonium",
-                                100000,
-                                1_700_000,
-                                1_700_000)
-                );
+                addDefaultFillings();
             } else {
                 context = (DBContext) this.getStorageManager().root();
             }
@@ -87,6 +64,42 @@ public class DBManager {
             LOG.error("Failed to init", ex);
             throw ex;
         }
+    }
+
+    /**
+     *
+     * @return true when cleaned
+     */
+    public boolean addDefaultFillings() {
+        if(!demoMode)
+            return false;
+
+        context.getFillings().clear();
+        context.getFillings().add(
+                new DBFilling(
+                        LocalDate.of(2020, 10, 24),
+                        "Diesel",
+                        29.5,
+                        1.00,
+                        500)
+        );
+        context.getFillings().add(
+                new DBFilling(
+                        LocalDate.of(2021, 2, 20),
+                        "Diesel",
+                        35,
+                        1.25,
+                        475)
+        );
+        context.getFillings().add(
+                new DBFilling(
+                        LocalDate.of(2015, 10, 21),
+                        "Plutonium",
+                        100000,
+                        1_700_000,
+                        1_700_000)
+        );
+        return true;
     }
 
     public void shutdown() {

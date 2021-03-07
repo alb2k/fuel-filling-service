@@ -31,6 +31,19 @@ public class FillingResource {
     @Inject
     private FillingService fillingService;
 
+    @Path("/cleanAndUseDefaults")
+    @GET
+    @Operation(summary = "Cleans all fillings and uses the defaults; Only available in demo mode")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response cleanAndUseDefaults() {
+        boolean cleaned = fillingService.cleanAndUseDefaults();
+
+        return Response
+                .status(cleaned ? Response.Status.OK : Response.Status.INTERNAL_SERVER_ERROR)
+                .entity(cleaned ? "Cleaned successfully" : "Failed to clean")
+                .build();
+    }
+
     @Path("/all")
     @GET
     @Operation(summary = "Returns all fillings")

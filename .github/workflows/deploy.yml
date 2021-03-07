@@ -1,0 +1,36 @@
+name: Deploy CI
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11.x
+        
+    - name: Cache local Maven repository
+      uses: actions/cache@v2
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
+
+    - name: Build with Maven
+      run: mvn -B clean package
+      
+    - name: Deploy to heroku
+      run: |
+        heroku plugins:install java
+        heroku deploy:jar target/fuel-filling-service.jar --jdk 11 --includes target/libs/ --app ${{ secrets.HEROKU_APP_NAME }}
+      env: 
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
