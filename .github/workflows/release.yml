@@ -38,7 +38,9 @@ jobs:
         
     - name: Pack release.zip
       working-directory: target
-      run: zip release.zip fuel-filling-service.jar libs
+      run: |
+        zip release.zip fuel-filling-service.jar 
+        zip -r release.zip libs
       
     - name: Upload Build Artifact release.zip
       uses: actions/upload-artifact@v2
@@ -68,6 +70,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build_release_jar]
     steps:
+    - uses: actions/checkout@v2
+     
     - name: pull-request
       uses: repo-sync/pull-request@v2
       with:
