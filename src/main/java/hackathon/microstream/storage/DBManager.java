@@ -79,17 +79,17 @@ public class DBManager {
                 new DBFilling(
                         LocalDate.of(2020, 10, 24),
                         "Diesel",
-                        29.5,
+                        500,
                         1.00,
-                        500)
+                        29.5)
         );
         context.getFillings().add(
                 new DBFilling(
                         LocalDate.of(2021, 2, 20),
                         "Diesel",
-                        35,
+                        475,
                         1.25,
-                        475)
+                        35)
         );
         context.getFillings().add(
                 new DBFilling(
