@@ -1,4 +1,4 @@
-# fuel-filling-service [![Demo](https://img.shields.io/website?label=demo&logo=heroku&url=https%3A%2F%2Fhackathon-ms-fuel-filling.herokuapp.com)](https://hackathon-ms-fuel-filling.herokuapp.com)
+# fuel-filling-service [![Demo](https://img.shields.io/website?label=demo&logo=heroku&url=https%3A%2F%2Fhackathon-ms-fuel-filling.herokuapp.com)](https://hackathon-ms-fuel-filling.herokuapp.com) [![Build Status](https://img.shields.io/github/workflow/status/ab-microstream-hackathon/fuel-filling-service/Check%20Build/develop)](https://github.com/ab-microstream-hackathon/fuel-filling-service/actions/workflows/checkBuild.yml?query=branch%3Adevelop)
 A helidon (microprofile) RESTful webservice with microstream.
 
 The project represents a basic CRUD webservice where you can manage fuel fillings (of a car).<br>
@@ -16,12 +16,12 @@ This project was created for the [Microstream hackathon](https://hackathon.micro
 * [GitHub Actions](https://github.com/features/actions) for CI/CD
 * [Heroku](https://www.heroku.com/) for hosting the demo
 
-## [Demo](https://hackathon-ms-fuel-filling.herokuapp.com)
+## [Demo](https://hackathon-ms-fuel-filling.herokuapp.com) [![Deployment Status](https://img.shields.io/github/workflow/status/ab-microstream-hackathon/fuel-filling-service/Deploy%20CI?label=deployment)](https://github.com/ab-microstream-hackathon/fuel-filling-service/actions/workflows/deploy.yml)
 The demo is hosted on heroku.
 
 ![openapi-ui screenshot](assets/OpenApiUI.png)
 
-## Download
+## Download [![Release Status](https://img.shields.io/github/workflow/status/ab-microstream-hackathon/fuel-filling-service/Release%20CI?label=release)](https://github.com/ab-microstream-hackathon/fuel-filling-service/actions/workflows/release.yml)
 There are prebuilt executables, which save you from building the executable locally.
 
 ### JAR
