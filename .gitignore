@@ -24,6 +24,7 @@ hs_err_pid*
 
 # Ignore IDEA
 .idea/
+*.iml
 
 #Ignore maven stuff
 target/
