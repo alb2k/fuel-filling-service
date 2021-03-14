@@ -34,7 +34,16 @@ There are prebuilt executables, which save you from building the executable loca
 
 ## Building / Executing it locally
 If you don't want to use the prebuilt executables you can also build the project.<br>
-You can either build and execute this project with Java or Docker.
+You can either build and execute this project IDE-based or directly with Java or Docker.
+
+### IDE
+Requirements (the IDE should contains these functions):
+* Java 11 
+* Maven 3
+
+### Run it
+* Build the project with ``mvn clean package``<br><i>NOTE: Normally this is not required, but it should be done when you wish to update the openapi file</i>
+* Start/Debug the project by invoking ``io.helidon.microprofile.cdi.Main``
 
 ### Java/JAR
 Requirements:
