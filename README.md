@@ -41,7 +41,7 @@ Requirements (the IDE should contains these functions):
 * Java 11 
 * Maven 3
 
-### Run it
+#### Run it
 * Build the project with ``mvn clean package``<br><i>NOTE: Normally this is not required, but it should be done when you wish to update the openapi file</i>
 * Start/Debug the project by invoking ``io.helidon.microprofile.cdi.Main``
 
@@ -63,9 +63,6 @@ Requirements:
 * Build the image with ``docker build -t fuel-filling .``
 * Execute it with ``docker run --rm -p 8080:8080 --name fuel-filling fuel-filling``
 * Stop/Remove it with ``docker stop fuel-filling``
-
-#### Native Image (experimental)
-* Build the native image with ``docker build -f Dockerfile.native -t fuel-filling-native .``
 
 #### JLink Image (experimental)
 * Build the native image with ``docker build -f Dockerfile.jlink -t fuel-filling-jlink .``
