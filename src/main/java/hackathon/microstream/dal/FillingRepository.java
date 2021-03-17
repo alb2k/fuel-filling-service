@@ -1,6 +1,6 @@
 package hackathon.microstream.dal;
 
-import hackathon.microstream.dal.util.CRUDException;
+import hackathon.microstream.dal.util.NotFoundException;
 import hackathon.microstream.domain.entities.Filling;
 import hackathon.microstream.storage.DBManager;
 import hackathon.microstream.storage.entities.DBFilling;
@@ -25,7 +25,7 @@ public class FillingRepository {
      *
      * @param id
      * @return
-     * @throws CRUDException
+     * @throws NotFoundException
      */
     public Filling getById(UUID id) {
         if(id == null)
@@ -37,7 +37,7 @@ public class FillingRepository {
                         .findFirst();
 
         if(optDbFilling.isEmpty())
-            throw new CRUDException(String.format("Unable to find filling with id=%s", id));
+            throw new NotFoundException(String.format("Unable to find filling with id=%s", id));
 
         return optDbFilling.get();
     }
@@ -70,7 +70,7 @@ public class FillingRepository {
      * Updates a filling
      * @param filling
      * @return
-     * @throws CRUDException
+     * @throws NotFoundException
      */
     public Filling update(UUID id, Filling filling) {
         if(id == null)
@@ -94,13 +94,13 @@ public class FillingRepository {
     /**
      * Deletes a filling
      * @param id
-     * @throws CRUDException
+     * @throws NotFoundException
      */
     public void delete(UUID id) {
         var fillings = getFillings();
 
         if(!fillings.remove(getById(id)))
-            throw new CRUDException(String.format("Unable to find filling with id=%s", id));
+            throw new NotFoundException(String.format("Unable to find filling with id=%s", id));
 
         DBManager.getInstance().save(fillings);
     }
