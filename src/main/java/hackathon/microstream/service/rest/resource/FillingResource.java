@@ -1,6 +1,5 @@
-package hackathon.microstream.service.restresource;
+package hackathon.microstream.service.rest.resource;
 
-import hackathon.microstream.dal.util.CRUDException;
 import hackathon.microstream.domain.entities.Filling;
 import hackathon.microstream.service.provider.FillingService;
 import hackathon.microstream.storage.entities.DBFilling;
@@ -69,16 +68,7 @@ public class FillingResource {
     )
     @Produces(MediaType.APPLICATION_JSON)
     public Response getById(@PathParam("id") UUID id) {
-        Filling dbFilling = null;
-
-        try {
-            dbFilling = this.fillingService.getById(id);
-        } catch (CRUDException ex) {
-            return Response
-                    .status(Response.Status.NOT_FOUND)
-                    .entity(ex.getMessage())
-                    .build();
-        }
+        final Filling dbFilling = this.fillingService.getById(id);
 
         return Response
                 .status(Response.Status.OK)
@@ -92,7 +82,7 @@ public class FillingResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response create(@Valid Filling filling) {
-        Filling dbFilling = this.fillingService.add(filling);
+        final Filling dbFilling = this.fillingService.add(filling);
 
         return Response
                 .status(Response.Status.OK)
@@ -112,16 +102,7 @@ public class FillingResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response update(@PathParam("id") UUID id, @Valid Filling filling) {
-        Filling dbFilling = null;
-
-        try {
-            dbFilling = this.fillingService.update(id, filling);
-        } catch (CRUDException ex) {
-            return Response
-                    .status(Response.Status.NOT_FOUND)
-                    .entity(ex.getMessage())
-                    .build();
-        }
+        final Filling dbFilling = this.fillingService.update(id, filling);
 
         return Response
                 .status(Response.Status.OK)
@@ -140,14 +121,7 @@ public class FillingResource {
     )
     @Consumes(MediaType.APPLICATION_JSON)
     public Response delete(@PathParam("id") UUID id) {
-        try {
-            fillingService.delete(id);
-        } catch (CRUDException ex) {
-            return Response
-                    .status(Response.Status.NOT_FOUND)
-                    .entity(ex.getMessage())
-                    .build();
-        }
+        fillingService.delete(id);
 
         return Response
                 .status(Response.Status.OK)

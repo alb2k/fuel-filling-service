@@ -1,6 +1,5 @@
-package hackathon.microstream.service.restresource;
+package hackathon.microstream.service.rest.resource;
 
-import hackathon.microstream.dal.util.CRUDException;
 import hackathon.microstream.domain.entities.Filling;
 import hackathon.microstream.service.provider.FillingService;
 import org.eclipse.microprofile.openapi.annotations.Operation;
@@ -38,33 +37,24 @@ public class FillingInfoResource {
     )
     @Produces(MediaType.APPLICATION_JSON)
     public Response getById(@PathParam("id") UUID id) {
-        Filling dbFilling = null;
-
-        try {
-            dbFilling = this.fillingService.getById(id);
-        } catch (CRUDException ex) {
-            return Response
-                    .status(Response.Status.NOT_FOUND)
-                    .entity(ex.getMessage())
-                    .build();
-        }
+        Filling dbFilling = this.fillingService.getById(id);
 
         return Response
                 .status(Response.Status.OK)
-                .entity(new FillingInfo(dbFilling))
+                .entity(new FillingExtInfo(dbFilling))
                 .build();
     }
 
-    public class FillingInfo extends Filling
+    public class FillingExtInfo extends Filling
     {
         private double units;
         private double eurosPer100Km;
         private double unitPer100Km;
 
-        public FillingInfo() {
+        public FillingExtInfo() {
         }
 
-        public FillingInfo(Filling filling) {
+        public FillingExtInfo(Filling filling) {
             this.setCompleteFilling(filling.isCompleteFilling());
             this.setFillingDate(filling.getFillingDate());
             this.setDrivenKm(filling.getDrivenKm());

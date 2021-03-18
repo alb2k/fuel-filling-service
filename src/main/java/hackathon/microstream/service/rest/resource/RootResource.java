@@ -1,4 +1,4 @@
-package hackathon.microstream.service.restresource;
+package hackathon.microstream.service.rest.resource;
 
 import org.eclipse.microprofile.openapi.annotations.Operation;
 

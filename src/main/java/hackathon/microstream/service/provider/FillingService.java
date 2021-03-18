@@ -1,7 +1,7 @@
 package hackathon.microstream.service.provider;
 
 import hackathon.microstream.dal.FillingRepository;
-import hackathon.microstream.dal.util.CRUDException;
+import hackathon.microstream.dal.util.NotFoundException;
 import hackathon.microstream.domain.entities.Filling;
 import hackathon.microstream.storage.entities.DBFilling;
 
@@ -24,7 +24,7 @@ public class FillingService {
      * Get a filling by id
      * @param id
      * @return
-     * @throws CRUDException
+     * @throws NotFoundException
      */
     public Filling getById(UUID id) {
         return this.fillingRepository.getById(id);
@@ -43,7 +43,7 @@ public class FillingService {
      * Updates a filling
      * @param filling
      * @return
-     * @throws CRUDException
+     * @throws NotFoundException
      */
     public Filling update(UUID id, Filling filling) {
         return this.fillingRepository.update(id, filling);
@@ -52,7 +52,7 @@ public class FillingService {
     /**
      * Deletes a filling from the DB
      * @param id
-     * @throws CRUDException
+     * @throws NotFoundException
      */
     public void delete(UUID id) {
         this.fillingRepository.delete(id);
