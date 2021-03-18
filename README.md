@@ -64,7 +64,4 @@ Requirements:
 * Execute it with ``docker run --rm -p 8080:8080 --name fuel-filling fuel-filling``
 * Stop/Remove it with ``docker stop fuel-filling``
 
-#### JLink Image
-* Build the native image with ``docker build -f Dockerfile.jlink -t fuel-filling-jlink .``
-
 ### Dependencies and Licenses [![dependency overview](https://img.shields.io/badge/dependency--overview-online-success?logo=apache-maven)](https://ab-microstream-hackathon.github.io/fuel-filling-service/dependencies/) [![Apache License 2.0](https://img.shields.io/github/license/ab-microstream-hackathon/fuel-filling-service?color=informational)](https://choosealicense.com/licenses/apache-2.0/)
