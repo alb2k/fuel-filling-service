@@ -10,6 +10,7 @@ This project was created for the [Microstream hackathon](https://hackathon.micro
 * [Microstream](https://microstream.one/platforms/microstream-for-java/)
 * [Microprofile (config)](https://github.com/eclipse/microprofile-config)
 * [Helidon MP](https://helidon.io/#getting-started)
+* [MP Health](https://github.com/eclipse/microprofile-health)
 * Logging via [SLF4J](http://www.slf4j.org/) and [Apache Log4j 2](https://logging.apache.org/log4)
 * [OpenApi](https://www.openapis.org/)
 * [OpenApi-UI](https://swagger.io/tools/swagger-ui/)
