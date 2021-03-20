@@ -1,5 +1,5 @@
 # Heroku deployment
-The goal was to deploy a demo online, so that you don't have to run the code locally and also have a showcase available online.
+The goal was to deploy a demo online, so that you don't have to run the code locally and also have a showcase available.
 
 I used [Heroku](https://www.heroku.com/home) once before with GitHub so I choose that as my cloud platform again.
 
