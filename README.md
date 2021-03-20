@@ -27,8 +27,8 @@ There are prebuilt executables, which save you from building the executable loca
 
 ### JAR
 * Check if you have Java 11 installed, if not [install it](https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=hotspot)
-* Download the [latest zip from the releases](https://github.com/alb2k/fuel-filling-service/releases/latest)
-* Unzip it and run it locally with ``java -jar fuel-filling-service.jar``
+* Download the [latest zip from the releases](https://github.com/alb2k/fuel-filling-service/releases/latest) and unzip it
+* Run ``java -jar fuel-filling-service.jar``
 * Open http://localhost:8080 
 → you should get redirected to the OpenAPI UI
 
