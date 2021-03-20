@@ -64,8 +64,10 @@ There is one special case when you want to use heroku: You have to either expose
 This can be done easily using a [Procfile](/Procfile) in the repository root which contains ``-Dserver.port=$PORT``.
 
 #### Deploying it
-Great now when everything was done correctly, you can go to the ``Actions`` tab of your repository and run the Deployment workflow:
+Great - now when everything was done correctly - you should be able to deploy it.<br>
+Go to the ``Actions`` tab of your repository and run the Deployment workflow:
 ![Pic](https://user-images.githubusercontent.com/80211953/111875065-137e2300-8998-11eb-9819-f83c0e04cdbc.png)
 
-In Herkou you should see that your app is now deployed:
-![Pic](https://user-images.githubusercontent.com/80211953/111875139-85566c80-8998-11eb-945a-b62fa2b9395b.png)
+After some time you should see that your app was deployed on Heroku.<br>
+It is also usedful to check the logs for problems and have a quick look at your app.
+![Pic](https://user-images.githubusercontent.com/80211953/111875837-1418b880-899c-11eb-895e-81c62ba2e5d4.png)
