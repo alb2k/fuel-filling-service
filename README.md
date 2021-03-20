@@ -4,8 +4,6 @@ A helidon (microprofile) RESTful webservice with microstream.
 The project represents a basic CRUD webservice where you can manage fuel fillings (of a car).<br>
 It is also shipped with a nice UI (openapi-ui) so that no external REST/HTTP client is required.
 
-This project was created for the [Microstream hackathon](https://hackathon.microstream.one/)
-
 ### Used technologies
 * [Microstream](https://microstream.one/platforms/microstream-for-java/)
 * [Microprofile (config)](https://github.com/eclipse/microprofile-config)
@@ -21,6 +19,10 @@ This project was created for the [Microstream hackathon](https://hackathon.micro
 The demo is hosted on heroku.
 
 ![openapi-ui screenshot](assets/OpenApiUI.png)
+
+* [OpenAPI-UI (redirection)](https://hackathon-ms-fuel-filling.herokuapp.com)
+* [OpenAPI](https://hackathon-ms-fuel-filling.herokuapp.com/openapi)
+* [Health](https://hackathon-ms-fuel-filling.herokuapp.com/health)
 
 ## Download [![Release Status](https://img.shields.io/github/workflow/status/alb2k/fuel-filling-service/Release%20CI?label=release)](https://github.com/alb2k/fuel-filling-service/actions/workflows/release.yml)
 There are prebuilt executables, which save you from building the executable locally.
@@ -66,3 +68,5 @@ Requirements:
 * Stop/Remove it with ``docker stop fuel-filling``
 
 ### Dependencies and Licenses [![dependency overview](https://img.shields.io/badge/dependency--overview-online-success?logo=apache-maven)](https://alb2k.github.io/fuel-filling-service/dependencies/) [![Apache License 2.0](https://img.shields.io/github/license/alb2k/fuel-filling-service?color=informational)](https://choosealicense.com/licenses/apache-2.0/)
+
+This project was created for the [Microstream hackathon](https://hackathon.microstream.one/)
