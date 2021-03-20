@@ -1,2 +1,4 @@
 target/*
-docker/*
+assets/*
+docs/*
+.github/*

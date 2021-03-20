@@ -126,4 +126,52 @@ public class DBManager {
     public DBContext getContext() {
         return context;
     }
+
+    public boolean isReady() {
+        return this.initialized && this.storageManager.isRunning();
+    }
+
+    public boolean isDemoMode() {
+        return demoMode;
+    }
+
+    public StorageManagerDetails getStorageManagerDetails() {
+        return this.storageManager != null ? new StorageManagerDetails(this.storageManager) : null;
+    }
+
+    public class StorageManagerDetails {
+        private String name;
+        private boolean active;
+        private long initializationTime;
+        private long initializationDuration;
+        private long operationModeTime;
+
+        public StorageManagerDetails(StorageManager storageManager) {
+            this.name = storageManager.getClass().getCanonicalName();
+            this.active = storageManager.isActive();
+            this.initializationTime = storageManager.initializationTime();
+            this.initializationDuration = storageManager.initializationDuration();
+            this.operationModeTime = storageManager.operationModeTime();
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public boolean isActive() {
+            return active;
+        }
+
+        public long getInitializationTime() {
+            return initializationTime;
+        }
+
+        public long getInitializationDuration() {
+            return initializationDuration;
+        }
+
+        public long getOperationModeTime() {
+            return operationModeTime;
+        }
+    }
 }

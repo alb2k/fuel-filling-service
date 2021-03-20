@@ -56,17 +56,24 @@
             <groupId>io.helidon.microprofile.bundles</groupId>
             <artifactId>helidon-microprofile-core</artifactId>
             <exclusions>
-                <!-- Confuses logger -->
+                <!-- Confuses slf4j logger -->
                 <exclusion>
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-jdk14</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- MP OpenAPI used e.g. for OpenApi-UI -->
         <dependency>
             <groupId>io.helidon.microprofile.openapi</groupId>
             <artifactId>helidon-microprofile-openapi</artifactId>
         </dependency>
+        <!-- MP Health-Checks -->
+        <dependency>
+            <groupId>io.helidon.microprofile.health</groupId>
+            <artifactId>helidon-microprofile-health</artifactId>
+        </dependency>
+        <!-- Logging adapter -->
         <dependency>
             <groupId>io.helidon.logging</groupId>
             <artifactId>helidon-logging-slf4j</artifactId>
