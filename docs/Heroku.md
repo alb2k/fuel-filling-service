@@ -38,7 +38,7 @@ The key can be generated via multiple methods.<br>
 I recommend adding a new "authorization" (API-Key) using https://dashboard.heroku.com/account/applications#authorizations
 
 #### Writing the workflow
-Setup a new workflow and name it e.g. [deploy.yml](../../workflows/deploy.yml)
+Setup a new workflow and name it e.g. [deploy.yml](../.github/workflows/deploy.yml)
 
 The workflow has to meet the following requirements:
 * Executed the workflow when a new release is created or manually
