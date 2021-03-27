@@ -11,6 +11,11 @@ import javax.enterprise.context.Destroyed;
 import javax.enterprise.context.Initialized;
 import javax.enterprise.event.Observes;
 
+/**
+ * Handles the startup and shutdown
+ *
+ * @seealso https://stackoverflow.com/a/11476587
+ */
 @ApplicationScoped
 public class Startup {
     private final static Logger LOG = LoggerFactory.getLogger(Startup.class);
