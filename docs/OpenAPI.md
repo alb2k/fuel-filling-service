@@ -16,3 +16,10 @@ To test the app without the requirement of an external HTTP Client, you can simp
 * Added a [RootResource](../src/main/java/hackathon/microstream/service/rest/resource/RootResource.java) which redirects to the OpenAPI UI endpoint when trying to get '/'
 
 I also highly recommend reading the ["Getting Started" page of OpenAPI-UI](https://github.com/microprofile-extensions/openapi-ext/blob/main/openapi-ui/README.md#getting-started), because it explains everything that was done in detail.
+
+
+Note: Using the app locally sometimes throws ``
+[WARN ] 2021-04-03 20:00:00.787 [helidon-2] io.helidon.webserver.RequestRouting - Default error handler: Response wasn't successfully sent.
+java.util.concurrent.CompletionException: io.helidon.webserver.SocketClosedException: Response channel is closed!
+`` when calling the root / '/'.<br>
+This problem does not occur when it is deployed on Heroku.
