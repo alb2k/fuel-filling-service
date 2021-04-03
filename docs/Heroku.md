@@ -1,5 +1,5 @@
 # Heroku deployment
-The goal was to deploy a demo online, so that you don't have to run the code locally and also have a showcase available.
+The goal here was to deploy a demo online, so that you don't have to run the code locally and also have a showcase available.
 
 I used [Heroku](https://www.heroku.com/home) once before with GitHub so I choose that as my cloud platform again.
 
@@ -19,14 +19,14 @@ After the account is set up, create a new app:
 Choose your region, add a name (the app will be available under that ``https://<name>.herokuapp.com``) and then click create app.
 
 ### Deploying the project using GitHub
-Great, now we have a new app on heroku but there isn't actually anything running, because nothing was deployed.
+Great, now we have a new app on heroku... but there isn't actually anything running, because nothing was deployed.
 
-So how can the code be deployed?
+So how can we deploy code (from GitHub)?<br>
 There are 2 ways:
-* Setup a deployment pipeline directly in heroku
+* Setup a deployment pipeline directly in Heroku
 * Write a [GitHub actions](https://github.com/features/actions) workflow that builds and deploys the code
 
-I wanted to stay independent from Heroku and - through the fact that I already had experience with GitHub Actions - I ultimatively choose those.
+I wanted to stay independent from Heroku and - through the fact that I already had experience with GitHub Actions - I ultimately choose those.
 
 #### Setting up secrets
 There have to be some [secrets stored for the coming GitHub Actions workflow](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository):
@@ -43,9 +43,9 @@ Setup a new workflow and name it e.g. [deploy.yml](../.github/workflows/deploy.y
 The workflow has to meet the following requirements:
 * Executed the workflow when a new release is created or manually
 * Build tha app (as jar)
-* Deployt the app to Heroku
+* Deploy the app to Heroku
 
-The first two part are pretty easy doable if you know a bit about GitHub Actions.<br>
+The first two parts are pretty easy doable if you know a bit about GitHub Actions.<br>
 The last part is a little bit more tricky:
 * GitHub Actions own virtual (linux) machines are by default equipped with the Heroku CLI.<br>More details are available [here](https://github.com/actions/virtual-environments#available-environments)
 * At first install [Heroku's Java plugin](https://github.com/heroku/plugin-java): ``heroku plugins:install java``
@@ -54,7 +54,7 @@ The last part is a little bit more tricky:
   * Set the JDK explicitly to Java 11 using ``--jdk 11``.<br> Heroku trys to deploy by default with JDK 8.
   * The libs folder must be included: ``--includes target/libs/``
   * Select the app that you want to deploy to with ``--app ${{ secrets.HEROKU_APP_NAME }}``
-  * Of course Heroku also needs some type of authentification. This is done using ``HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}``
+  * Of course Heroku also needs some type of authentication. This is done using ``HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}``
 
 In the last 2 steps you noted the use of ``${{ secret.XXX }}`` this is the usage of the GitHub secrets we created before.
 
@@ -69,5 +69,5 @@ Go to the ``Actions`` tab of your repository and run the Deployment workflow:
 ![Pic](https://user-images.githubusercontent.com/80211953/111875065-137e2300-8998-11eb-9819-f83c0e04cdbc.png)
 
 After some time you should see that your app was deployed on Heroku.<br>
-It is also usedful to check the logs for problems and have a quick look at your app.
+It is also useful to check the logs for problems and have a quick look at your app.
 ![Pic](https://user-images.githubusercontent.com/80211953/111875837-1418b880-899c-11eb-895e-81c62ba2e5d4.png)
