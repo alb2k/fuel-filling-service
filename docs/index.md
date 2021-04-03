@@ -12,5 +12,5 @@ Each part of the project has it's own documentation:
 
 
 ## Overview
-A quick overview how the project is designed to work:
+A quick overview how the project is designed to work:<br><p></p>
 ![Overview](https://user-images.githubusercontent.com/80211953/112724270-d7583e80-8f12-11eb-9506-5e62c647f98d.png)
