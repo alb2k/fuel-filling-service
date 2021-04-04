@@ -10,6 +10,6 @@ WIP
 * config via MP
 * CDI
 * Validation 
-** ConstraintViolationExceptionMapper
+  * ConstraintViolationExceptionMapper
 * ObjectMapperContextResolver
 * NotFoundExceptionHandler
