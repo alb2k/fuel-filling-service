@@ -19,7 +19,8 @@ It is also shipped with a nice UI (openapi-ui) so that no external REST/HTTP cli
 Documentation about this project is [available here](docs/index.md)
 
 ## [Demo](https://hackathon-ms-fuel-filling.herokuapp.com) [![Deployment Status](https://img.shields.io/github/workflow/status/alb2k/fuel-filling-service/Deploy%20CI?label=deployment)](https://github.com/alb2k/fuel-filling-service/actions/workflows/deploy.yml)
-The demo is hosted on heroku.
+The demo is hosted on heroku.<br>
+It may take some seconds to start.
 
 ![openapi-ui screenshot](assets/OpenApiUI.png)
 
