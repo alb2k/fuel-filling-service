@@ -1,8 +1,10 @@
 # Logging
+To protocol informations about events in the app, some kind of logging is required.<br>
+For Java therefore multiple logging frameworks exist. Some popular ones include SLF4J, LOG4J, JUL, Logback, etc.
 
 Helidon uses [JUL](https://docs.oracle.com/javase/8/docs/api/java/util/logging/package-summary.html) as default logger.
 
-## Using another logging framework
+### Using another logging framework
 However I prefer the more statisfying [SLF4J](http://www.slf4j.org/) (→ https://stackoverflow.com/a/11360517) in combination with [Log4j 2](https://logging.apache.org/log4j/2.x/).<br>
 So an adapter was needed to redirect JUL to SLF4J...
 
