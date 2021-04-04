@@ -2,7 +2,7 @@
 Documentation about this project
 
 ## Details
-Each part of the project has it's own documentation:
+Each part / Used technology of the project has it's own documentation:
 1. [Helidon](Helidon.md)
 2. [Microstream](Microstream.md)
 3. [OpenAPI (+UI)](OpenAPI.md)
@@ -12,5 +12,5 @@ Each part of the project has it's own documentation:
 
 
 ## Overview
-A quick overview how the project is designed to work:<br><p></p>
+A quick overview how the project is designed to work:<p></p>
 ![Overview](https://user-images.githubusercontent.com/80211953/112724270-d7583e80-8f12-11eb-9506-5e62c647f98d.png)
