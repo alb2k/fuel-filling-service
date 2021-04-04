@@ -17,7 +17,7 @@ Luckily I found [this great guide about how to use Heldion with other logging fr
   * [org.slf4j:jul-to-slf4j](https://mvnrepository.com/artifact/org.slf4j/jul-to-slf4j) (JUL → SLF4J)
   * [org.apache.logging.log4j:log4j-slf4j-impl](https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl) (SLF4J → LOG4J)
   * [org.apache.logging.log4j:log4j-core](https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core) ("real" logging framework)
-* Added a [log4j2.xml](../src/main/resources/log4j2.xml)
+* Added [log4j2.xml](../src/main/resources/log4j2.xml) which [configures the logging framework](https://logging.apache.org/log4j/2.x/manual/configuration.html)
 * Tweaked the [logging.properties](../src/main/resources/logging.properties) a bit so that it works correctly
 * Due to no available main entry class the SLF4JBridgeHandler for JUL is installed in the [Startup class](../src/main/java/hackathon/microstream/Startup.java#L26-L30)
 
