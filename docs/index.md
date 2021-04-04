@@ -3,12 +3,17 @@ Documentation about this project
 
 ## Details
 Each part / Used technology of the project has it's own documentation:
-1. [Helidon](Helidon.md)
-2. [Microstream](Microstream.md)
-3. [OpenAPI (+UI)](OpenAPI.md)
+1. [Helidon](Helidon.md)<br>
+Webservice, CDI, Configuration with Microprofile and more
+2. [Microstream](Microstream.md)<br>
+Graph based binary data storage
+3. [OpenAPI (+UI)](OpenAPI.md)<br>
+Standardized specification to describe REST-conform APIs + UI
 4. [Logging](Logging.md)
-5. [GitHub Actions](GHActions.md)
-6. [Heroku](Heroku.md)
+5. [GitHub Actions](GHActions.md)<br>
+Continuous Integration (CI) / Continuous Delivery (CD)
+6. [Heroku](Heroku.md)<br>
+How to host a demo online
 
 
 ## Overview
