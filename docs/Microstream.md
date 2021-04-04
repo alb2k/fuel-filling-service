@@ -1,6 +1,6 @@
 # Microstream
 
-[Microstream](https://microstream.one/) is a storage/persostence solution which uses Graphs and binary files for it's storage.
+[Microstream](https://microstream.one/) is a storage/persistence solution which uses Graphs and binary files for it's storage.
 
 The project was mainly written based on the [Microstream Getting Started Guide](https://manual.docs.microstream.one/data-store/getting-started)
 
