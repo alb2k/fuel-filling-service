@@ -21,7 +21,7 @@ Luckily I found [this great guide about how to use Heldion with other logging fr
 * Tweaked the [logging.properties](../src/main/resources/logging.properties) a bit so that it works correctly
 * Due to no available main entry class the SLF4JBridgeHandler for JUL is installed in the [Startup class](../src/main/java/hackathon/microstream/Startup.java#L26-L30)
 
-After everything was done the output now looks like this:
+After everything was done the output looks like this:
 ```
 "...java.exe" ... io.helidon.microprofile.cdi.Main
 [INFORMATION] 2021-04-03 20:31:47 [Thread[main,5,main]] Logging at initialization configured using classpath: /logging.properties 
