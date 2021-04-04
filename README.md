@@ -6,8 +6,8 @@ It is also shipped with a nice UI (openapi-ui) so that no external REST/HTTP cli
 
 ### Used technologies
 * [Microstream](https://microstream.one/platforms/microstream-for-java/)
+* [Helidon MP](https://helidon.io/#getting-started) 
 * [Microprofile (config)](https://github.com/eclipse/microprofile-config)
-* [Helidon MP](https://helidon.io/#getting-started)
 * [MP Health](https://github.com/eclipse/microprofile-health)
 * Logging via [SLF4J](http://www.slf4j.org/) and [Apache Log4j 2](https://logging.apache.org/log4)
 * [OpenApi](https://www.openapis.org/)
