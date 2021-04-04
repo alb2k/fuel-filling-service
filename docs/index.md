@@ -1,5 +1,5 @@
 # Docs
-Documentation about the project
+Documentation about this project
 
 ## Details
 Each part of the project has it's own documentation:
