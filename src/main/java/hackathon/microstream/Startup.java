@@ -14,7 +14,7 @@ import javax.enterprise.event.Observes;
 /**
  * Handles the startup and shutdown
  *
- * @seealso https://stackoverflow.com/a/11476587
+ * @see <a href="https://stackoverflow.com/a/11476587">https://stackoverflow.com/a/11476587</a>
  */
 @ApplicationScoped
 public class Startup {
