@@ -1,7 +1,7 @@
 # Helidon (Microprofile)
 
-[Helidon MP](https://helidon.io/docs/latest/#/about/02_introduction) is a [collection of Java Libaries](https://alb2k.github.io/fuel-filling-service/dependencies/#Dependency_Tree).<br>
-This project is based on [helidon-quickstart-mp](https://github.com/oracle/helidon/tree/master/examples/quickstarts/helidon-quickstart-mp)
+[Helidon MP](https://helidon.io/docs/latest/#/about/02_introduction) is a [collection of Java Libaries](https://alb2k.github.io/fuel-filling-service/dependencies/#Dependency_Tree) mainly used for Java/Jakarte EE conform web/microservices.<br>
+This project is based on [helidon-quickstart-mp](https://github.com/oracle/helidon/tree/master/examples/quickstarts/helidon-quickstart-mp).
 
 ## Webservice
 ![Heldion_Overview.png](https://user-images.githubusercontent.com/80211953/113520281-34e32f80-9592-11eb-8ea8-6d5d118864b2.png)
@@ -29,7 +29,7 @@ To also automatically serialize Java objects (to JSON) in a response without the
 More information [available here](https://stackoverflow.com/questions/26207252/messagebodywriter-not-found-for-media-type-application-json).
 
 #### CDI
-The corresponding [service](../src/main/java/hackathon/microstream/service/provider) is injected via CDI.
+The corresponding [service](../src/main/java/hackathon/microstream/service/provider) is injected into the rest resource via CDI.
 
 #### Microprofile
 Furthermore the integrated webserver can be configured with microprofile.<br>
