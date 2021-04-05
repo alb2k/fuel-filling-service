@@ -19,7 +19,7 @@ import javax.ws.rs.ext.Provider;
  *     </li>
  *     <li>
  *         By default ObjectMapper throws an exception, if unknown properties are supplied.<br/>
- *         To be a bit less restrictive, unknown properties are allowed (easier handling of objects with / without UUID
+ *         To be a bit less restrictive, unknown properties are allowed (easier handling of objects with / without UUID)
  *     </li>
  * </ul>
  *
