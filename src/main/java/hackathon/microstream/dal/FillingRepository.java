@@ -27,7 +27,7 @@ public class FillingRepository {
      * @return
      * @throws NotFoundException
      */
-    public Filling getById(UUID id) {
+    public DBFilling getById(UUID id) {
         if(id == null)
             throw new IllegalArgumentException("id can't be null");
 
@@ -48,7 +48,7 @@ public class FillingRepository {
      * @param filling
      * @return
      */
-    public Filling add(Filling filling) {
+    public DBFilling add(Filling filling) {
         if(filling == null)
             throw new IllegalArgumentException("filling can't be null");
 
@@ -72,13 +72,13 @@ public class FillingRepository {
      * @return
      * @throws NotFoundException
      */
-    public Filling update(UUID id, Filling filling) {
+    public DBFilling update(UUID id, Filling filling) {
         if(id == null)
             throw new IllegalArgumentException("id can't be null");
         if(filling == null)
             throw new IllegalArgumentException("filling can't be null");
 
-        Filling dbFilling = getById(id);
+        var dbFilling = getById(id);
 
         // Update the properties in the bean
         try {
