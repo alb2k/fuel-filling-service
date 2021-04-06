@@ -21,5 +21,5 @@ I also highly recommend reading the ["Getting Started" page of OpenAPI-UI](https
 Note: Using the app locally sometimes throws ``
 [WARN ] 2021-04-03 20:00:00.787 [helidon-2] io.helidon.webserver.RequestRouting - Default error handler: Response wasn't successfully sent.
 java.util.concurrent.CompletionException: io.helidon.webserver.SocketClosedException: Response channel is closed!
-`` when calling the root / '/'.<br>
+`` when calling the root endpoint ('/').<br>
 This problem does not occur when it is deployed on Heroku.
