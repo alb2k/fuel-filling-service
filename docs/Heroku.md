@@ -42,7 +42,7 @@ Setup a new workflow and name it e.g. [deploy.yml](../.github/workflows/deploy.y
 
 The workflow has to meet the following requirements:
 * Executed the workflow when a new release is created or manually
-* Build tha app (as jar)
+* Build the app (as jar)
 * Deploy the app to Heroku
 
 The first two parts are pretty easy doable if you know a bit about GitHub Actions.<br>
@@ -59,7 +59,7 @@ The last part is a little bit more tricky:
 In the last 2 steps you noted the use of ``${{ secret.XXX }}`` this is the usage of the GitHub secrets we created before.
 
 #### Using a Procfile
-There is one special case when you want to use heroku: You have to either expose your app on Port 80 or you have to bind to Herokus ``PORT`` environment variable.
+There is one special case when you want to use Heroku: You have to either expose your app on Port 80 or you have to bind to Herokus ``PORT`` environment variable.
 
 This can be done easily using a [Procfile](/Procfile) in the repository root which contains ``-Dserver.port=$PORT``.
 
