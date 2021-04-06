@@ -6,12 +6,14 @@ This project is based on [helidon-quickstart-mp](https://github.com/oracle/helid
 ## Webservice
 ![Heldion_Overview.png](https://user-images.githubusercontent.com/80211953/113520281-34e32f80-9592-11eb-8ea8-6d5d118864b2.png)
 
-The HTTP Webservice was done with [JAX-RS](https://en.wikipedia.org/wiki/Jakarta_RESTful_Web_Services) and other [Java/Jakarta EE technologies](https://en.wikipedia.org/wiki/Jakarta_EE).<br>
+The HTTP Webservice was done with [JAX-RS](https://en.wikipedia.org/wiki/Jakarta_RESTful_Web_Services) and other [Java/Jakarta EE technologies](https://en.wikipedia.org/wiki/Jakarta_EE) (see below).<br>
 The "rest resources" (which represent the HTTP interface) are located in [src/main/java/hackathon/microstream/service/rest/resource](../src/main/java/hackathon/microstream/service/rest/resource).
+
+The integrated webserver is the by default shipped [Helidon-Webserver](https://github.com/oracle/helidon/tree/master/webserver/webserver).
 
 #### Validation
 If entities are transmitted to a method they are validated (via the ``@Valid`` annotation) using [jersey-bean-validation](https://eclipse-ee4j.github.io/jersey.github.io/documentation/latest/bean-validation.html).<br>
-When the validation fails, a ``ConstraintViolationException`` is thrown which is automatically processed by the [ConstraintViolationExceptionMapper](../src/main/java/hackathon/microstream/service/system/ConstraintViolationExceptionMapper.java) and results in a better feedback:
+When the validation fails, a ``ConstraintViolationException`` is thrown which is automatically processed by the [ConstraintViolationExceptionMapper](../src/main/java/hackathon/microstream/service/system/ConstraintViolationExceptionMapper.java) so that it results in a better readable exception:
 ```
 Unrecognized token 'trues': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
  at [Source: (org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$UnCloseableInputStream); line: 7, column: 30]
