@@ -26,7 +26,7 @@ public class FillingService {
      * @return
      * @throws NotFoundException
      */
-    public Filling getById(UUID id) {
+    public DBFilling getById(UUID id) {
         return this.fillingRepository.getById(id);
     }
 
@@ -35,7 +35,7 @@ public class FillingService {
      * @param filling
      * @return
      */
-    public Filling add(Filling filling) {
+    public DBFilling add(Filling filling) {
         return this.fillingRepository.add(filling);
     }
 
@@ -45,7 +45,7 @@ public class FillingService {
      * @return
      * @throws NotFoundException
      */
-    public Filling update(UUID id, Filling filling) {
+    public DBFilling update(UUID id, Filling filling) {
         return this.fillingRepository.update(id, filling);
     }
 

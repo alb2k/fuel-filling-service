@@ -9,6 +9,9 @@ import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
 
+/**
+ * Manages DB access (Microstream)
+ */
 public class DBManager {
     private static final Logger LOG = LoggerFactory.getLogger(DBManager.class);
 
