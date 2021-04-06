@@ -1,6 +1,6 @@
-# [OpenAPI](https://www.openapis.org/)
+# OpenAPI
 
-OpenAPI is a standardized specification to describe REST-conform APIs.
+[OpenAPI](https://www.openapis.org/) is a standardized specification to describe REST-conform APIs.
 
 Helidon supports OpenAPI.<br>
 For more information read [this guide](https://medium.com/helidon/project-helidon-and-openapi-54a1fadc75b1).
