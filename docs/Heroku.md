@@ -51,12 +51,13 @@ The last part is a little bit more tricky:
 * At first install [Heroku's Java plugin](https://github.com/heroku/plugin-java): ``heroku plugins:install java``
 * Deploy the jar with the deploy command ``heroku deploy:jar``
   * Select the jar using ``target/fuel-filling-service.jar``
-  * Set the JDK explicitly to Java 11 using ``--jdk 11``.<br> Heroku trys to deploy by default with JDK 8.
+  * Set the JDK to Java 11 using ``--jdk 11``.<br> Heroku trys to deploy by default with JDK 8.
   * The libs folder must be included: ``--includes target/libs/``
   * Select the app that you want to deploy to with ``--app ${{ secrets.HEROKU_APP_NAME }}``
   * Of course Heroku also needs some type of authentication. This is done using ``HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}``
 
-In the last 2 steps you noted the use of ``${{ secret.XXX }}`` this is the usage of the GitHub secrets we created before.
+In the last 2 steps you noted the use of ``${{ secret.XXX }}``. <br>
+This is the usage of the GitHub secrets we created before.
 
 #### Using a Procfile
 There is one special case when you want to use Heroku: You have to either expose your app on Port 80 or you have to bind to Herokus ``PORT`` environment variable.
