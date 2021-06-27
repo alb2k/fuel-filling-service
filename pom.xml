@@ -294,12 +294,6 @@
                     <groupId>io.helidon.integrations.graal</groupId>
                     <artifactId>helidon-mp-graal-native-image-extension</artifactId>
                 </dependency>
-                <!-- Required for the native-image build -->
-                <dependency>
-                    <groupId>org.jmdns</groupId>
-                    <artifactId>jmdns</artifactId>
-                    <version>3.5.7</version>
-                </dependency>
             </dependencies>
         </profile>
         <profile>
