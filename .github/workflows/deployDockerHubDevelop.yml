@@ -4,6 +4,8 @@ on:
   workflow_dispatch:
   push:
     branches: [ develop ]
+    paths-ignore: 
+      - '**.md'
 
 jobs:
   build_publish_docker:
