@@ -66,7 +66,11 @@ Requirements:
 Requirements:
 * Docker
 
-#### "Normal" Dockerfile
+#### Running the prebuilt image from DockerHub [![Latest docker version](https://img.shields.io/badge/docker-latest-%232684ff)](https://hub.docker.com/r/alb2k/fuel-filling-service/tags?name=latest&page=1) [![Develop docker version](https://img.shields.io/badge/docker-develop-%232684ff)](https://hub.docker.com/r/alb2k/fuel-filling-service/tags?name=develop&page=1)
+* Run the latest release using ``docker run --rm -p 8080:8080 --name fuel-filling alb2k/fuel-filling-service``
+* Stop/Remove it with ``docker stop fuel-filling``
+
+#### Building and running it
 * Build the image with ``docker build -t fuel-filling .``
 * Execute it with ``docker run --rm -p 8080:8080 --name fuel-filling fuel-filling``
 * Stop/Remove it with ``docker stop fuel-filling``
