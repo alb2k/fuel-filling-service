@@ -29,15 +29,18 @@ It may take some seconds to start.
 * [Health](https://hackathon-ms-fuel-filling.herokuapp.com/health)
 
 ## Download [![Release Status](https://img.shields.io/github/workflow/status/alb2k/fuel-filling-service/Release%20CI?label=release)](https://github.com/alb2k/fuel-filling-service/actions/workflows/release.yml)
-There are prebuilt executables, which save you from building the executable locally.
+There are prebuilt executables, so that you don't have to build the code locally.
 
 ### JAR
 * Check if you have Java 11 installed, if not [install it](https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=hotspot)
 * Download the [latest zip from the releases](https://github.com/alb2k/fuel-filling-service/releases/latest) and unzip it
 * Run ``java -jar fuel-filling-service.jar``
-* Open http://localhost:8080 
-→ you should get redirected to the OpenAPI UI
+* Open http://localhost:8080
 
+### Docker [![Latest docker version](https://img.shields.io/badge/docker-latest-%232684ff)](https://hub.docker.com/r/alb2k/fuel-filling-service/tags?name=latest&page=1) [![Develop docker version](https://img.shields.io/badge/docker-develop-%232684ff)](https://hub.docker.com/r/alb2k/fuel-filling-service/tags?name=develop&page=1)
+* Run the latest release using ``docker run --rm -p 8080:8080 --name fuel-filling alb2k/fuel-filling-service``
+* Stop/Remove it with ``docker stop fuel-filling``
+* Open http://localhost:8080
 
 ## Building / Executing it locally
 If you don't want to use the prebuilt executables you can also build the project.<br>
@@ -65,10 +68,6 @@ Requirements:
 ### Docker
 Requirements:
 * Docker
-
-#### Running the prebuilt image from DockerHub [![Latest docker version](https://img.shields.io/badge/docker-latest-%232684ff)](https://hub.docker.com/r/alb2k/fuel-filling-service/tags?name=latest&page=1) [![Develop docker version](https://img.shields.io/badge/docker-develop-%232684ff)](https://hub.docker.com/r/alb2k/fuel-filling-service/tags?name=develop&page=1)
-* Run the latest release using ``docker run --rm -p 8080:8080 --name fuel-filling alb2k/fuel-filling-service``
-* Stop/Remove it with ``docker stop fuel-filling``
 
 #### Building and running it
 * Build the image with ``docker build -t fuel-filling .``
